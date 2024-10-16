@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perla negra</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'app1/css/estilo.css' %}">
+    <link rel="stylesheet" href="{% static 'app1/css/navbar.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+    
+</head>
+<body>
+    <div class="container">
+        
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'tatuadores' %}">Tatuadores</a></li>
+                <li> <a href="{% url 'galeria' %}">Galeria</a></li>
+                <li> <a href="{% url 'contacto' %}">Contacto</a></li>
+            </ul>
+        </nav>
+        {% if request.path == '/inicio/' %}    
+            <img src="{% static 'app1/images/dragonblanco.png' %}" alt="Logo" class="logo">
+
+            <h1>        
+                <span>Perla</span>
+                <span>Negra</span>
+                <span>Ink</span>
+            </h1>
+        {% endif %}            
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

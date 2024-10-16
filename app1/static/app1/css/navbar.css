@@ -1,0 +1,28 @@
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: top;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-family: 'Pirata One', cursive;
+}
+
+nav a:hover {
+    text-decoration: underline; 
+}
